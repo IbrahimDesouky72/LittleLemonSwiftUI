@@ -1,9 +1,10 @@
 import Foundation
 
-struct RestaurantLocation:Hashable {
+struct RestaurantLocation:Identifiable,Hashable {
   let city:String
   let neighborhood:String
   let phoneNumber:String
+    let id = UUID()
   
   init(city:String = "",
        neighborhood:String = "",
